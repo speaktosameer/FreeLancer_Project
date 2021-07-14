@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container,Col,Row,FormControl,} from "react-bootstrap"
 import Button from "../Button"
-import {FaGoogle,FaUser} from "react-icons/fa"
+import {FaGoogle} from "react-icons/fa"
 import {Link} from "gatsby"
 import "../styles/Signup.css"
 

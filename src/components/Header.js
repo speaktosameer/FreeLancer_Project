@@ -84,7 +84,7 @@ align-items:center;
 text-decoration: none;
 padding: 0 1rem;
 height:100%;
-curso:pointer;
+cursor:pointer;
 `
 
 const Bars = styled(FaBars)`

@@ -1,19 +1,94 @@
-footer{
-    background-color: #0291B9;
-
-}
-
-.footer_container{
-    padding: 5% 0;
+.flex-container {
     display: flex;
-    justify-content: space-around;
-    color: #fff;
-}
-
-hr{
-    background-color: #fff;
-}
-
-.socail_icons *{
+    background-color: rgb(29,29,29);
+    padding-top: 100px;
+  }
+  
+  .flex-container > div {
+    font-family: "Roboto", sans-serif;
+    color:white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+  }
+  p{
+  color:#AAB1B7;
+  font-family: "Roboto", sans-serif;
+  }
+  p>a{
+  color:#AAB1B7;
+  font-family: "Roboto", sans-serif;
+  text-decoration:none;
+  }
+  p>a:hover{
+  color:white;
+  font-family: "Roboto", sans-serif;
+  text-decoration:none;
+  }
+  .social-icon{
+      margin: 0 10px;
+      color: white;
+  }
+  .social-icon:hover{
     margin: 0 10px;
+    color: #0291B9;
+    cursor: pointer;
 }
+.copyright{
+    color:white;
+    padding: 40px;
+    background-color: black;
+    text-align: center;
+}
+.subscribe{
+    color:white;
+    padding: 40px;
+    background-color: #0291B9;
+    text-align: center;
+    display: grid;
+    justify-content:center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+input[type=text]{
+    width: 71%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px 0px 0px 10px;
+  }
+.sbtn{
+    background-color: #00D363;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+  }
+  
+.sbtn:hover {
+    background-color: #45a049;
+  }
+  span{
+      color: #ccc;
+  }
+/* button{
+    width: 100px;
+    height:50px;
+    background: white;
+    font-size: 15px;
+    border: 1px solid #334A60;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+
+} */
+
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+  
+  
