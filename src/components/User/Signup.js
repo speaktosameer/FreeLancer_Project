@@ -1,60 +1,34 @@
 import React from 'react'
-import {Container,Col,Row,FormControl,} from "react-bootstrap"
-import Button from "../Button"
-import {FaGoogle} from "react-icons/fa"
-import {Link} from "gatsby"
-import "../styles/Signup.css"
+import '../styles/auth.css'
+import { FaHome } from 'react-icons/fa';
 
-const Signup = () => {
-
-    
-
+function Signup() {
     return (
-        <Container className="signin">
-
-            <Row className="content">
-<h2 style={{textAlign:'center'}}>Register Now</h2>
-                <div className="userInfo">
-
-                            <Col>
-                                <FormControl type="email" required className="inputPlaceholder" placeholder="&#61447; Email" />
-                            </Col>
-                            
-                            <Col>
-                                <FormControl type="text" required className="inputPlaceholder" placeholder="&#61447; Username" />
-                            </Col>
-                            
-
-                            <Col>
-                                <FormControl type="Password" required className="inputPlaceholder" placeholder="&#61475; Password" />   
-                            </Col>
-                            
-                            
-                            <Col>
-                                <FormControl type="Password" required className="inputPlaceholder" placeholder="&#61475; Confirm password" />   
-                            </Col>
-                    </div>
-
-                <Col>
-<Button style={{width:"300px"}} text="Signup" big="true"  />
-                </Col>
-
-                <Col>
-                <p style={{textAlign:"center"}}>or</p>
-                </Col>
-
-                <Col>
-                <Button Icon={<FaGoogle/>} text="  Continue with google" >
-                 
-                </Button>
-                </Col>
-
-                <Col>
-                Already have an account <Link to="/login" style={{color:"#0291B9"}}>Signin</Link>
-                </Col>
-
-            </Row>
-        </Container>
+        <>
+        
+  <section>
+    <div class="container">
+      <div class="user Box">
+        <div class="formBx">
+          <form action="" onsubmit="return false;">
+          <FaHome class="gotohomesignup"/>  
+            <h2>Create an account</h2>
+            <input type="text" name="" placeholder="Username" />
+            <input type="email" name="" placeholder="Email Address" />
+            <input type="password" name="" placeholder="Create Password" />
+            <input type="password" name="" placeholder="Confirm Password" />
+            <input type="submit" name="" value="Sign Up" />
+            <p class="signup">
+              Already have an account ?
+              <a href="#">Sign in.</a>
+            </p>
+          </form>
+        </div>
+        <div class="imgBx"><img src="https://images.unsplash.com/photo-1587614382231-d1590f0039e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" /></div>
+      </div>
+    </div>
+  </section>
+        </>
     )
 }
 

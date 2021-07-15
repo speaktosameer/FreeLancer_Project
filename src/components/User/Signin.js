@@ -1,45 +1,35 @@
 import React from 'react'
-import {Container,Col,Row,FormControl,} from "react-bootstrap"
-import Button from "../Button";
-import {FaGoogle} from "react-icons/fa"
-import {Link} from "gatsby"
-import "../styles/Signin.css"
+import '../styles/auth.css'
+import { FaHome } from 'react-icons/fa';
 
-const Signin = () => {
-
+function Signin(){
     return (
-        <Container className="signin">
-            <Row className="content">
-
-                <Col>
-                <FormControl type="email" required className="inputPlaceholder" placeholder="&#61447; Email" />
-                </Col>
-                
-                <Col>
-                <FormControl type="Password" required className="inputPlaceholder" placeholder="&#61475; Password" />   
-                </Col>
-                
-                <Col>
-<Button text="Signin"  />
-                </Col>
-
-                <Col>
-                or
-                </Col>
-
-                <Col>
-                <Button Icon={<FaGoogle/>} primary={true} text="  Continue with google" >
-                
-                </Button>
-                </Col>
-
-                <Col>
-                Don't have an account <Link to="/signup" style={{color:"#0291B9"}}>Signup</Link>
-                </Col>
-
-            </Row>
-        </Container>
+        <>
+             <section>
+    <div class="container">
+      <div class="user signinBx">
+        <div class="imgBx"><img src="https://images.unsplash.com/photo-1599110364793-19e5bb7828e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" /></div>
+        <div class="formBx">
+        
+          <form action="" onsubmit="return false;">
+          <FaHome class="gotohomelogin"/>  
+            <h2>Sign In</h2>
+            
+            <input type="text" name="" placeholder="Username" />
+            <input type="password" name="" placeholder="Password" />
+            <input type="submit" name="" value="Login" />
+            <p class="signup">
+              Don't have an account ?
+              <a href="#">Sign Up.</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+        </>
     )
 }
 
 export default Signin
+

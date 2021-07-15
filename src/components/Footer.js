@@ -10,7 +10,7 @@ const Footer = () => {
             <h2>Subscribe to our Newsletter</h2>
             <span>Join us our team by subscribe to Freelancer Nepal</span>
             <div class="input-group mb-3">
-  <input type="text" placeholder="Enter Your Email"/>
+  <input type="text" class="stext" placeholder="Enter Your Email"/>
   <div>
     <button type="button" class="sbtn">Subscribe</button>
   </div>
