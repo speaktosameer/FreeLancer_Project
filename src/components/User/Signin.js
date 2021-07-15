@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/auth.css'
 import { FaHome } from 'react-icons/fa';
+import { Link } from 'gatsby';
 
 function Signin(){
     return (
@@ -12,7 +13,7 @@ function Signin(){
         <div class="formBx">
         
           <form action="" onsubmit="return false;">
-          <FaHome class="gotohomelogin"/>  
+          <Link to="/"><FaHome class="gotohomelogin"/></Link>
             <h2>Sign In</h2>
             
             <input type="text" name="" placeholder="Username" />
@@ -20,7 +21,7 @@ function Signin(){
             <input type="submit" name="" value="Login" />
             <p class="signup">
               Don't have an account ?
-              <a href="#">Sign Up.</a>
+              <Link to="/signup">Sign Up</Link>
             </p>
           </form>
         </div>
