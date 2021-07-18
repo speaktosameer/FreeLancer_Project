@@ -1,124 +1,172 @@
-import React,{useState} from "react"
+import React from "react"
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { menuData } from "../data/MenuData";
-import Button from './Button';
-import {useLocation} from '@reach/router'
 
-const Header = () => {
+const Header = ({toogle}) => {
+    return (
+        <>
+            <Nav>
+                 <NavbarContainer>
+                   <NavLogo to="/">freelancer</NavLogo>
+                     <MobileIcon onClick={toogle}>
+                        <FaBars/>
+                    </MobileIcon>
+                    <NavMenu>
+                             {menuData.map((item,index) => (
+                            <NavLinks to={item.link} key={index}>
+                            {item.title}
+                            </NavLinks>
+                            ))}
 
-  const location = useLocation()
-  console.log(location.pathname);
+                        {/* <NavItem>
+                            <NavLinks to="findtutor">Browse Jobs</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="howitwork">How It Works</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="about">About</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="becometutor">Become Freelancer</NavLinks>
+                        </NavItem> */}
+                    </NavMenu>
+                    <NavBtn>
+                        <NavBtnLink to="/Signin">Connect</NavBtnLink>
+                        <NavBtnLink to="/">Post Project</NavBtnLink>
+                    </NavBtn>
+                </NavbarContainer> 
+            </Nav>
+        </>
+    )
+};
 
-
-  const [bgcolor, setbgcolor] = useState("transparent");
-  const [textcolor, settextcolor] = useState("white");
-  const [position, setposition] = useState("relative");
-
-  window.onscroll = ()=>{
-    if(window.pageYOffset > 50)
-    {
-      setbgcolor("#0291B9");
-     settextcolor("white")
-     setposition("fixed")
-    }
-
-    else{
-    
-      if(location.pathname === "/")
-      {
-        setbgcolor("transparent");
-        settextcolor("white")
-        setposition("relative")
-      }
-    
-      else{
-        setbgcolor("#0291B9");
-        settextcolor("white")
-        setposition("relative")
-      }
-      
-    }
-    
-  }
-
-
-  return(
-    <Nav bgcolor={bgcolor} textcolor={textcolor} position={position}  >
-      <NavLink to="/">Freelance Nepal</NavLink>
-      <Bars/>    
-      <NavMenu>
-        {menuData.map((item,index) => (
-          <NavLink to={item.link} key={index}>
-            {item.title}
-          </NavLink>
-        ))}
-      </NavMenu>
-      <NavBtn>
-        <Button primary="true" text="Post Project" round="true" to="/postproject" ></Button>
-      </NavBtn>
-    </Nav>
-
-  )
-}
 export default Header
 
-const Nav = styled.nav`
-background: ${props => props.bgcolor};
-color: ${props => props.textcolor};
-height: 50px;
-justify-content:space-between;
-display:flex;
-padding:0.5rem calc(100vw -1300px) / 2;
-z-index:100;
-position:${props=>props.position};
-top:0;
-width:100%;
-`
 
-const NavLink = styled(Link)`
-color: #fff;
-display:flex;
-align-items:center;
-text-decoration: none;
-padding: 0 1rem;
-height:100%;
-cursor:pointer;
-`
+export const Nav = styled.nav`
+    background: #077BF1;
+    height: 80px;
+    ${'' /* margin-top: -80px; */}
+    display: flex;
+    justify-content: center;
+    align-items :center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
-const Bars = styled(FaBars)`
-display:none;
-color:#fff;
+    @media screen and (max-width: 960px){
+        transition: 0.8s all ease;
+    }
+`;
 
-@media screen and (max-width :768px){
-  display:block;
-  position:absolute;
-  top:0;
-  right:0;
-  transform:translate(-100% ,75%);
-  font-size:1.5rem;
-  cursor:pointer;
-}
-`
+ export const NavbarContainer = styled.div`
+     display: flex;
+     justify-content: space-between;
+     height: 80px;
+     z-index: 1;
+     width: 100%;
+     padding: 0 24px;
+     max-width: 1300px;
+ `;
+ export const NavLogo = styled(Link)`
+     color: #fff;
+     justify-self: flex-start;
+     cursor: pointer;
+     font-size:2rem;
+     display: flex;
+     align-items: center;
+     margin-left: 24px;
+     font-weight: bold;
+     text-decoration: none;
 
-const NavMenu=styled.div`
-display:flex;
-align-items:center;
-margin-right:-48px; 
+     &:hover{
+         text-decoration:none;
+         color:#fff;
+     }
+ `;
 
-@media screen and (max-width :768px){
-display:none;
-}
-`
+ export const MobileIcon = styled.div`
+     display:none;
 
-const NavBtn = styled.div`
-display:flex;
-align-items:center;
-margin-right:24px; 
+     @media screen and (max-width: 768px){
+         display: block;
+         position: absolute;
+         top: 0;
+         right: 0;
+         transform: translate(-100%, 60%);
+         font-size: 1.8rem;
+         cursor: pointer;
+         color: #fff;
+     }
+ `;
 
-@media screen and (max-width :768px){
-display:none;
-}
+ export const NavMenu = styled.ul`
+     display: flex;
+     align-items: center;
+     list-style: none;
+     text-align: center;
+     margin-right: -22px;
 
-`
+     @media screen and (max-width: 768px) {
+         display:none;
+     }
+ `;
+
+
+ export const NavLinks = styled(Link)`
+     color :#fff;
+     font-size:16px;
+     font-weight:bold;
+     margin-top:25px;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     padding: 0 1rem;
+     height: 100%;
+     cursor: pointer;
+
+     &.active{
+         border-bottom: 3px solid #01bf71;
+         
+     },
+     &:hover{
+        text-decoration: none;
+     }
+
+ `;
+
+export const NavBtn = styled.nav`
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }    
+`;
+
+export const NavBtnLink = styled(Link)`
+    border-radius: 50px;
+    background: #014FB9;
+    white-space: nowrap;
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration:none;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    
+    
+    &:hover{
+        transition: all 0.1s ease-in-out;
+        background:#fff;
+        color: #010606;
+        text-decoration:none;
+    }
+`;

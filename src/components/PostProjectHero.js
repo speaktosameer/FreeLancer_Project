@@ -1,14 +1,14 @@
 import React from 'react'
-import {category} from '../data/postProjectMetaData' 
-import '../components/styles/PostProject.css'
-import Button from './Button'
+// import {category} from '../data/postProjectMetaData' 
+// import '../components/styles/PostProject.css'
+// import Button from './Button'
 
 
 const PostProjectHero = () => {
     
     return (
         <main>
-            <div className="discription">
+            {/* <div className="discription">
                 <h2>Tell us what you need to be done</h2>
                 <p>Contact skilled freelancers within minutes. View profiles, rating, portfolio and chat with them. Pay the freelancer only when you are 100% satsify with their work</p>
             </div>
@@ -66,7 +66,7 @@ const PostProjectHero = () => {
 
                 <Button primary="true" big="true" round="true" text="Submit" ></Button>
                     
-            </div>
+            </div> */}
         </main>
     )
 }

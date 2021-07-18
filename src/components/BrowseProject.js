@@ -1,11 +1,12 @@
 import React from 'react'
 import "../components/styles/BrowseProject.css"
+import { Link } from "gatsby";
 import {browsejob } from '../data/browsejob'
-const BrowseProject = ({}) => {
+const BrowseProject = () => {
     return (
         <main className="main">
             <aside>
-Filer Porjects
+                    Filer Porjects
             </aside>
 
             <div className="projects">
@@ -13,7 +14,7 @@ Filer Porjects
                 {browsejob.map(data=>(
                     <div className="project_container">
                     <div className="description">
-                        <h3><a href="#">{data.title}</a></h3>
+                        <h3><Link to="#">{data.title}</Link></h3>
                         <p>{data.discription}</p>
                         <span className="category"><strong>{data.category}</strong></span>
                         <span className="subcategory"><strong>{data.subcategory}</strong></span>

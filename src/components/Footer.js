@@ -1,6 +1,7 @@
 import React from 'react'
 import '../components/styles/Footer.css'
 import {FaFacebook,FaTwitter,FaInstagram,FaLocationArrow,FaLinkedin,FaDiscord,FaPhoneAlt,FaTelegramPlane} from 'react-icons/fa'
+import { Link } from "gatsby"
 
 const Footer = () => {
     return (
@@ -40,30 +41,30 @@ const Footer = () => {
   <div>
   <h3>Trending</h3>
   <hr/>
-  <p><a href="#">Web Design</a></p>
-  <p><a href="#">Graphic Design</a></p>
-  <p><a href="#">Web Developers</a></p>
-  <p><a href="#">Python</a></p>
-  <p><a href="#">React</a></p>
+  <p><Link to="#">Web Design</Link></p>
+  <p><Link to="#">Graphic Design</Link></p>
+  <p><Link to="#">Web Developers</Link></p>
+  <p><Link to="#">Python</Link></p>
+  <p><Link to="#">React</Link></p>
   </div>
   <div>
   <h3>Company</h3>
   <hr/>
-  <p><a href="#">About Us</a></p>
-  <p><a href="#">How it works</a></p>
-  <p><a href="#">Blog</a></p>
-  <p><a href="#">Carrer</a></p>
-  <p><a href="#">Resources</a></p>
-  <p><a href="#">FAQs</a></p>
+  <p><Link to="#">About Us</Link></p>
+  <p><Link to="#">How it works</Link></p>
+  <p><Link to="#">Blog</Link></p>
+  <p><Link to="#">Carrer</Link></p>
+  <p><Link to="#">Resources</Link></p>
+  <p><Link to="#">FAQs</Link></p>
   </div>
   <div>
   <h3>Category</h3>
   <hr/>
-  <p><a href="#">Design & Arts</a></p>
-  <p><a href="#">Engineering</a></p>
-  <p><a href="#">Sales & Marketing</a></p>
-  <p><a href="#">Finance</a></p>
-  <p><a href="#">Programming</a></p>
+  <p><Link to="#">Design & Arts</Link></p>
+  <p><Link to="#">Engineering</Link></p>
+  <p><Link to="#">Sales & Marketing</Link></p>
+  <p><Link to="#">Finance</Link></p>
+  <p><Link to="#">Programming</Link></p>
   </div>
   <div>
   <h3>Have a question</h3>
