@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
-import Button from './Button';
-import Video from "../assets/videos/HeroSection.mp4"
+import Video from "../assets/videos/HeroBackground.mp4"
+import { Link } from "gatsby";
 
 const Hero = () => {
     return (
@@ -17,7 +17,7 @@ const Hero = () => {
                     <HeroP>
                     We connects you.
                     </HeroP>
-                    <Button primary="true" big="true" round="true" text="Post a Job" to="/postproject"></Button>
+                    <HeroBtn to="/postproject">Hire Freelancer</HeroBtn>
                 </HeroItems>
             </HeroContent>
         </HeroContainer>
@@ -72,6 +72,7 @@ const HeroContent = styled.div`
 z-index:3;
 height:calc(100vh-80px);
 max-height:100%;
+margin-top:280px;
 padding:0rem calc((100vw-1300px) / 2);
 `
 
@@ -87,17 +88,39 @@ color:#fff;
 line-height:1.1;
 font-weight:bold;
 
-`
+`;
 
 const HeroH1=styled.h1`
-font-size: clamp(1.5rem, 6vw ,4rem);
-margin-bottom:1.5rem;
+font-size: clamp(1.5rem, 3vw ,5 rem);
 letter-spacing:3px;
-padding:0 1rem;
-`
+`;
 
 const HeroP=styled.p`
 font-size: clamp(1rem, 3vw ,3rem);
 margin-bottom:2rem;
 font-weight:400;
+color:#003;
 `
+
+const HeroBtn = styled(Link)`
+    border-radius: 50px;
+    background: #014FB9;
+    white-space: nowrap;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration:none;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    
+    
+    &:hover{
+        transition: all 0.1s ease-in-out;
+        background:#fff;
+        color: #010606;
+        text-decoration:none;
+    }
+`;

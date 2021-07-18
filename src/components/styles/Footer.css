@@ -59,7 +59,7 @@
     border-radius: 10px 0px 0px 10px;
   }
 .sbtn{
-    background-color: #00D363;
+    background-color: #077BF1;
     color: white;
     padding: 12px 20px;
     margin: 8px 0;
@@ -69,7 +69,7 @@
   }
   
 .sbtn:hover {
-    background-color: #45a049;
+    background-color: #077bf8;
   }
   span{
       color: #ccc;

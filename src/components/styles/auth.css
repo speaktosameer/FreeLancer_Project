@@ -141,13 +141,11 @@ section .container.active .Box .imgBx {
 
 .gotohomelogin{
     color:black;
-    margin-left: 320px;
-    margin-top: -210px;
+    margin-left: 300px;
+    margin-top: -160px;
 }
 .gotohomesignup{
     color:black;
-    margin-right: 320px;
-    margin-top: -100px;
 }
 .gotohomelogin:hover{
     cursor: pointer;

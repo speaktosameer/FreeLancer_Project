@@ -36,7 +36,9 @@ const Heading = styled.h1`
 text-align: start;
 font-size: clamp(1.5rem, 5vw, 2rem);
 margin-bottom: 3rem;
+font-weight:bold;
 padding: 0 2rem;
+color:#000;
 `
 const Wrapper = styled.div`
 display: grid;
@@ -65,7 +67,9 @@ const Title = styled.p`
 font-weight: bold;
 font-size: clamp(1rem, 2.5vw, 1.5rem);
 margin-bottom: 0.5rem;
+color:#000;
 `
 const Description =styled.p`
 font-size:1rem;
+color:#002;
 `

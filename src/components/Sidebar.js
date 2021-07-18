@@ -22,11 +22,11 @@ const Sidebar = ({isOpen,toogle}) => {
                 <SidebarLink to="becometutor" onClick={toogle}>About</SidebarLink>
                 <SidebarLink to="about" onClick={toogle}>Become Freelancer</SidebarLink> */}
             </SidebarMenu>
-            <SideBtnWrap>
+            {/* <SideBtnWrap>
                 <SidebarRoute to="/login">
                     Connect
                 </SidebarRoute>
-            </SideBtnWrap>
+            </SideBtnWrap> */}
             <SideBtnWrap>
             <SidebarRoute to="/signup">
                     Post Project

@@ -34,7 +34,6 @@ const Header = ({toogle}) => {
                         </NavItem> */}
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/Signin">Connect</NavBtnLink>
                         <NavBtnLink to="/">Post Project</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer> 
@@ -46,7 +45,7 @@ const Header = ({toogle}) => {
 export default Header
 
 
-export const Nav = styled.nav`
+ const Nav = styled.nav`
     background: #077BF1;
     height: 80px;
     ${'' /* margin-top: -80px; */}
@@ -63,7 +62,7 @@ export const Nav = styled.nav`
     }
 `;
 
- export const NavbarContainer = styled.div`
+  const NavbarContainer = styled.div`
      display: flex;
      justify-content: space-between;
      height: 80px;
@@ -72,7 +71,7 @@ export const Nav = styled.nav`
      padding: 0 24px;
      max-width: 1300px;
  `;
- export const NavLogo = styled(Link)`
+  const NavLogo = styled(Link)`
      color: #fff;
      justify-self: flex-start;
      cursor: pointer;
@@ -89,7 +88,7 @@ export const Nav = styled.nav`
      }
  `;
 
- export const MobileIcon = styled.div`
+  const MobileIcon = styled.div`
      display:none;
 
      @media screen and (max-width: 768px){
@@ -104,7 +103,7 @@ export const Nav = styled.nav`
      }
  `;
 
- export const NavMenu = styled.ul`
+  const NavMenu = styled.ul`
      display: flex;
      align-items: center;
      list-style: none;
@@ -117,7 +116,7 @@ export const Nav = styled.nav`
  `;
 
 
- export const NavLinks = styled(Link)`
+  const NavLinks = styled(Link)`
      color :#fff;
      font-size:16px;
      font-weight:bold;
@@ -139,7 +138,7 @@ export const Nav = styled.nav`
 
  `;
 
-export const NavBtn = styled.nav`
+ const NavBtn = styled.nav`
     display: flex;
     align-items: center;
 
@@ -148,7 +147,7 @@ export const NavBtn = styled.nav`
     }    
 `;
 
-export const NavBtnLink = styled(Link)`
+ const NavBtnLink = styled(Link)`
     border-radius: 50px;
     background: #014FB9;
     white-space: nowrap;

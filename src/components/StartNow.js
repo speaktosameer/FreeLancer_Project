@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import Img from "gatsby-image";
 import { FaRegLightbulb } from "react-icons/fa";
-import Button from "./Button";
+import { Link } from "gatsby";
 import { useStaticQuery ,graphql } from 'gatsby';
 
 const StartNow = () => {
@@ -46,7 +46,7 @@ const StartNow = () => {
                     <p><FaRegLightbulb/></p>
                     <h3>Grow your business</h3>
                     <h1>Trusted globally by over 1 million businesses, small to large.</h1>
-                    <Button to="/start-now-for-free" primary="true" round="true" >Start Now for Free</Button>
+                    <StartBtn to="/start-now-for-free">Start Now</StartBtn>
                     </Freelancer>
                 </ColumnOne>
             </ContentWrapper>
@@ -62,7 +62,32 @@ width:100%;
 background:#fcfcfc;
 color:#000;
 padding: 3rem calc((100vw - 1300px) / 2);
-`
+`;
+
+const StartBtn = styled(Link)`
+    border-radius: 50px;
+    background: #014FB9;
+    white-space: nowrap;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight:bold;
+    text-decoration:none;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    
+    
+    &:hover{
+        transition: all 0.1s ease-in-out;
+        color: #010606;
+        text-decoration:none;
+        font-size: 16px;
+        font-weight:bold;
+    }
+`;
 
 // const TopLine =styled.p`
 // color:#077bf1;
@@ -132,6 +157,7 @@ margin-top:2rem;
 }`
 
 const Images= styled(Img)`
-border-radius:10px;
+border-radius:0px;
 height:100%;
 `
+

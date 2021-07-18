@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import Img from "gatsby-image";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import Button from "./Button";
+import { Link } from "gatsby";
 import { useStaticQuery ,graphql } from 'gatsby';
 
 const Freelance = () => {
@@ -41,10 +41,10 @@ const Freelance = () => {
                     <p><IoMdCheckmarkCircleOutline/></p>
                     <h1>Embrace the freelance revolution</h1>
                     <h3>There's never been a better time to take yourself online and start making money from your very own fine-tuned set of skills.</h3>
+                    <FreetBtn to="/join-as-a-freelancer">Join as Freelancer</FreetBtn>
                 </Freelancer>
-                <Freelancer>
-                    <Button to="/join-as-a-freelancer" primary="true" round="true" text="Join as A Freelancer" ></Button>
-                </Freelancer>
+                    
+                
                 </ColumnOne>
                 <ColumnTwo>
                 {data.allFile.edges.map((image, key) => (
@@ -67,6 +67,31 @@ padding: 5rem calc((100vw - 1300px) / 2);
 height:100%;
 `
 
+const FreetBtn = styled(Link)`
+    border-radius: 50px;
+    background: #014FB9;
+    white-space: nowrap;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight:bold;
+    text-decoration:none;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    
+    
+    
+    &:hover{
+        transition: all 0.1s ease-in-out;
+        color: #010606;
+        text-decoration:none;
+        font-size: 16px;
+        font-weight:bold;
+    }
+`;
 // const TopLine =styled.p`
 // color:#077bf1;
 // font-size:1rem;
@@ -93,13 +118,14 @@ padding: 0 2rem;
 
 const ColumnOne =styled.div`
 display:grid;
+margin-top:-40px;   
 ${'' /* grid-template-rows:1fr 1fr; */}
 
 
 @media screen and (max-width:500px){
     grid-tmplate-columns:1fr;
     padding:0;
-    margin-bottom:25px;
+    margin-bottom:20px;
     top:0;
 }
 
@@ -116,6 +142,7 @@ h1{
 }
 h3{
     color:#3b3b3b;
+    margin-bottom:50px;
 }
 
 p{
@@ -136,6 +163,6 @@ grid-gap:5px;
 }`
 
 const Images= styled(Img)`
-border-radius:10px;
+border-radius:0px;
 height:100%;
 `
