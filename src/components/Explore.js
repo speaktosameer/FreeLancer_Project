@@ -40,7 +40,6 @@ const Explore = ({heading}) => {
                      {/* <CategorySubTitle>{item.node.alt}</CategorySubTitle> */}
                      <CategoryTitle>{item.node.name}</CategoryTitle>
                    </TextWrap>
-                   
                  </CategoryInfo>
                  </CategoryCard>
                
@@ -65,7 +64,8 @@ const CategoryContainer = styled.div`
 height: 50%;
 padding: 2rem calc((100vw - 1300px) / 2);
 color:#fff;
-background-color:#dee;
+background-color:#fff;
+
 `
 
 const CategoryHeading = styled.div`
@@ -80,12 +80,13 @@ const CategoryWrapper =styled.div`
 display:grid;
 grid-template-columns:repeat(6, 1fr);
 grid-gap:10px; 
-margin-bottom:20px;
+margin-bottom: -200px;
 justify-items:center;
 padding:0 2rem;
 
 
 @media screen and (max-width:1200px){
+  margin-bottom:20px;
   grid-template-columns:1fr 1fr;
 }
 @media screen and (max-width:868px){
@@ -101,7 +102,9 @@ position:relative;
 border-radius:10px;
 transition:0.2s ease;
 
-
+@media screen and (max-width:868px){
+margin-bottom: -200px;
+}
 
 `
 
@@ -117,6 +120,8 @@ transition:0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 @media screen and (max-width:868px){
 height:40%;
 max-width:50%;
+margin-left:100px;
+
 }
 
 &:hover{
@@ -165,7 +170,6 @@ color:#000;
       text-decoration:none;
   }
   @media screen and (max-width:868px){
-  margin:0px;
   margin-left:180px;
 }
 `;
