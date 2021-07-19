@@ -123,6 +123,7 @@ margin-left:100px;
     padding:0;
     margin-bottom:25px;
     top:0;
+    margin-left:-2px;
 }
 `
 
@@ -144,6 +145,7 @@ p{
     color:#f9b19b;
     font-size:3rem;
     margin-bottom:10px;
+}
 `
 
 const ColumnTwo = styled.div`

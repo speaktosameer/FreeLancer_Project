@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Hero/>
     <Freelance/> 
     <Stats/>
-    <Categories heading="Most Popular Categories"/>
+    <Categories heading={"Most Categories"}/>
     <StartNow/>
     
   </Layout>
