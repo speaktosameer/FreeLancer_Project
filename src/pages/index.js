@@ -6,6 +6,7 @@ import Categories from "../components/Categories"
 import Freelance from "../components/Freelance"
 import StartNow from "../components/StartNow"
 import Stats from "../components/Stats"
+import Explore from "../components/Explore"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Stats/>
     <Categories heading={"Most Categories"}/>
     <StartNow/>
+    <Explore heading={"Explore the marketplace"}/>
     
   </Layout>
 )

@@ -1,0 +1,33 @@
+[
+    {
+        "img": "../assets/images/explore1.jpg",
+        "alt": "Engage your Community",
+        "name": "Graphics & Design"
+    },
+    {
+        "img": "../assets/images/explore2.jpg",
+        "alt": "Boost your Traffic",
+        "name": "Digital Marketing"
+    },
+    {
+        "img": "../assets/images/explore3.jpg",
+        "alt": "Create your Site",
+        "name": "Writing & Translation"
+    },
+    {
+        "img": "../assets/images/explore4.jpg",
+        "alt": "Evaluate your Brand",
+        "name": "Video & Animation"
+    },
+    {
+        "img": "../assets/images/explore5.jpg",
+        "alt": "Evaluate your Brand",
+        "name": "Music & Audio"
+    },
+    {
+        "img": "../assets/images/explore6.jpg",
+        "alt": "Evaluate your Brand",
+        "name": "Programming & Tech"
+    }
+    
+]
